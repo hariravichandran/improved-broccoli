@@ -1,0 +1,30 @@
+---
+title: "Plotly Assignment"
+author: "Hari Ravichandran"
+date: "May 29, 2018"
+output: 
+  revealjs::revealjs_presentation:
+    theme: league
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hello
+- On the next slide, you will see a plot of the 'mtcars' data set. I plot the mpg vs. the number of cylinders.
+
+## Plot of Mtcars
+```{r plotly, echo = FALSE, message = FALSE}
+library(datasets)
+
+library(plotly)
+set.seed(100)
+
+m <- mtcars
+
+plot_ly(data = m, x = ~cyl, y = ~mpg, mode = "markers", type = "scatter", color = ~disp)
+```
+
+## Thanks for Watching!
+- I look forward to your feedback.
